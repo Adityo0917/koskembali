@@ -46,3 +46,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local Netlify folder
+.netlify/*
+!.netlify/features/
+!.netlify/features/netlify-identity
+!.netlify/results.md

@@ -76,7 +76,7 @@ export function BookingForm({
     <form onSubmit={submit} className="rounded-xl border border-border bg-card p-5">
       <h2 className="font-semibold text-text-primary">Pesan barang ini</h2>
       <p className="mt-1 text-xs text-text-secondary">
-        Bayar DP Rp20.000 untuk mengunci barang.
+        DP Rp20.000 masih simulasi. Tidak ada uang yang ditagih.
       </p>
 
       <div className="mt-4 space-y-3">
@@ -204,7 +204,7 @@ export function BookingForm({
         disabled={loading}
         className="mt-4 inline-flex h-12 w-full items-center justify-center rounded-lg bg-primary text-base font-semibold text-white transition-colors hover:bg-primary-light disabled:opacity-50"
       >
-        {loading ? "Memproses..." : "Pesan dengan DP Rp20.000"}
+        {loading ? "Memproses..." : "Buat booking (simulasi)"}
       </button>
 
       <p className="mt-3 text-center text-xs text-text-secondary">

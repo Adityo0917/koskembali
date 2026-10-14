@@ -3,18 +3,21 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { useAuth } from "@/components/auth-provider";
 
 const navLinks = [
   { href: "/", label: "Beranda" },
   { href: "/katalog", label: "Katalog" },
   { href: "/daftar", label: "Jual Barang" },
   { href: "/daftar/status", label: "Status Pesanan" },
+  { href: "/pembayaran", label: "Pembayaran" },
   { href: "/koordinator", label: "Dashboard" },
 ];
 
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const { user, ready } = useAuth();
   const aktif = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
@@ -28,7 +31,7 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav aria-label="Navigasi utama" className="hidden items-center gap-1 lg:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -44,7 +47,10 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-3 lg:flex">
+          <Link href="/login" className="inline-flex min-h-11 items-center rounded-lg border border-border px-4 text-sm font-semibold text-primary hover:bg-primary/5">
+            {!ready ? "Akun" : user ? "Akun Saya" : "Masuk"}
+          </Link>
           <Link
             href="/daftar"
             className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-light"
@@ -54,7 +60,7 @@ export function Header() {
         </div>
 
         <button
-          className="flex h-11 w-11 items-center justify-center rounded-lg transition-colors hover:bg-border/50 md:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-lg transition-colors hover:bg-border/50 lg:hidden"
           onClick={() => setOpen(!open)}
           aria-label={open ? "Tutup menu" : "Buka menu"}
           aria-expanded={open}
@@ -85,8 +91,8 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-border bg-card md:hidden">
-          <nav className="flex flex-col gap-1 p-4">
+        <div className="border-t border-border bg-card lg:hidden">
+          <nav aria-label="Navigasi seluler" className="flex flex-col gap-1 p-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -102,6 +108,9 @@ export function Header() {
               </Link>
             ))}
             <hr className="my-2 border-border" />
+            <Link href="/login" onClick={() => setOpen(false)} className="rounded-lg border border-border px-4 py-3 text-center text-sm font-semibold text-primary">
+              {!ready ? "Akun" : user ? "Akun Saya" : "Masuk / Daftar"}
+            </Link>
             <Link
               href="/daftar"
               onClick={() => setOpen(false)}
