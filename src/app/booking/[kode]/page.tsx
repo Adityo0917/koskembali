@@ -179,9 +179,11 @@ export default async function BookingDetailPage({ params }: PageProps) {
       <div className="mt-6 flex flex-col gap-2 sm:flex-row">
         <Link
           href="/katalog"
-          className="inline-flex h-11 min-h-11 flex-1 items-center justify-center rounded-lg bg-primary font-medium text-white hover:bg-primary-light"
+          prefetch={false}
+          className="inline-flex h-11 min-h-11 flex-1 items-center justify-center gap-2 rounded-lg bg-primary font-medium text-white hover:bg-primary-light focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
         >
-          Cari barang lain
+          <span aria-hidden="true">←</span>
+          Kembali ke katalog
         </Link>
         <Link
           href="/daftar/status"
