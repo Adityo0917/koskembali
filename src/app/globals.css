@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: hsl(142, 72%, 29%);
+  --color-primary-light: hsl(142, 72%, 45%);
+  --color-primary-dark: hsl(142, 72%, 22%);
+  --color-secondary: hsl(222, 47%, 11%);
+  --color-background: hsl(0, 0%, 98%);
+  --color-card: hsl(0, 0%, 100%);
+  --color-accent: hsl(32, 95%, 50%);
+  --color-text-primary: hsl(222, 47%, 11%);
+  --color-text-secondary: hsl(222, 47%, 35%);
+  --color-border: hsl(222, 47%, 90%);
+  --color-success: hsl(142, 72%, 45%);
+  --color-warning: hsl(32, 95%, 50%);
+  --color-error: hsl(0, 84%, 60%);
+  /* Varian gelap khusus TEKS. Warna utama terlalu terang untuk teks kecil:
+     oranye #f98806 hanya 2,46:1 dan hijau #20c55d hanya 2,28:1 di atas putih.
+     Varian ini dipakai pada badge, pesan galat, dan teks status agar
+     tetap di atas ambang WCAG AA 4,5:1. */
+  --color-success-text: hsl(142, 72%, 22%);
+  --color-warning-text: hsl(32, 90%, 31%);
+  --color-error-text: hsl(0, 72%, 42%);
+  --color-accent-text: hsl(32, 90%, 31%);
+  /* Varian solid untuk bidang berisi teks putih. */
+  --color-success-solid: hsl(142, 72%, 26%);
+  --color-accent-solid: hsl(32, 90%, 32%);
+  --font-sans: var(--font-geist-sans);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}

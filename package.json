@@ -1,0 +1,38 @@
+{
+  "name": "koskembali",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=23.4.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "db:check": "node db_check.mjs",
+    "qa:text": "node qa_text_scan.mjs",
+    "qa:layout": "node qa_layout.mjs",
+    "qa:contrast": "node audit_contrast.mjs",
+    "qa:shots": "node capture_uiux.mjs"
+  },
+  "dependencies": {
+    "next": "16.3.5",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "server-only": "^0.0.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^24.19.1",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.5",
+    "puppeteer-core": "^24.43.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

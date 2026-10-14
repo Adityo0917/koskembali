@@ -1,0 +1,23 @@
+# Normalisasi akhir baris agar tidak berubah-ubah antar sistem operasi.
+* text=auto eol=lf
+
+# File biner jangan disentuh.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg text
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.pdf binary
+*.sqlite binary
+*.docx binary
+*.xlsx binary
+
+# Lockfile harus ikut berkembang.
+package-lock.json text eol=lf
+
+# Jangan tampilkan di diff statistik.
+package-lock.json -diff

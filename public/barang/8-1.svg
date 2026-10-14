@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Kompor Gas Tunggal Foto 1 dokumentasi">
+  <defs>
+    <linearGradient id="g81" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbeee6"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g81)"/>
+  <rect x="0" y="0" width="800" height="86" fill="#b0532a" opacity="0.92"/>
+  <text x="32" y="40" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" fill="#ffffff">KosKembali</text>
+  <text x="32" y="68" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#ffffff" opacity="0.85">Dokumentasi oleh koordinator lapangan</text>
+  <text x="768" y="52" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#ffffff" opacity="0.9">Foto 1</text>
+  <g transform="translate(-18,110)">
+    <rect x="70" y="70" width="560" height="330" rx="26" fill="#ffffff" stroke="#b0532a" stroke-width="3" opacity="0.96"/>
+    <rect x="104" y="104" width="492" height="262" rx="14" fill="#fbeee6" stroke="#b0532a" stroke-width="2" stroke-dasharray="10 8" opacity="0.9"/>
+    <g fill="none" stroke="#b0532a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity="0.55">
+      <rect x="214" y="164" width="272" height="146" rx="16"/>
+      <circle cx="286" cy="212" r="26"/>
+      <path d="M214 292l74-70 54 50 44-40 100 88"/>
+    </g>
+    <text x="350" y="358" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="17" fill="#b0532a" opacity="0.65">Foto barang</text>
+  </g>
+  <rect x="0" y="496" width="800" height="104" fill="#ffffff" opacity="0.97"/>
+  <text x="32" y="538" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#16233a">Kompor Gas Tunggal</text>
+  <text x="32" y="568" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#4a5872">Foto contoh untuk mockup UI/UX - bukan foto barang asli</text>
+  <rect x="672" y="522" width="96" height="34" rx="17" fill="#b0532a" opacity="0.14"/>
+  <text x="720" y="545" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="600" fill="#b0532a">4:3</text>
+</svg>
