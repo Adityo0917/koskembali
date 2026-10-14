@@ -145,9 +145,7 @@ latar putih, sehingga tidak lolos WCAG AA untuk teks berukuran kecil. Karena itu
 Hasil audit terakhir: 107 kombinasi warna teks/latar diukur, seluruhnya lolos ambang
 WCAG 2.1 AA, dengan rasio terendah 4,87:1.
 
-## Batasan yang Belum Diselesaikan
-
-Bagian ini penting agar tidak ada klaim berlebihan saat presentasi.
+## Batasan penting nian ni asli yang Belum Diselesaikan 
 
 1. **Payment gateway belum ada.** Status DP masih mockup dan di-hardcode sebagai `paid`.
    Belum ada integrasi Midtrans, Xendit, atau penyedia lain.
