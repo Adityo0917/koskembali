@@ -8,8 +8,8 @@ import { useAuth } from "@/components/auth-provider";
 const navLinks = [
   { href: "/", label: "Beranda" },
   { href: "/katalog", label: "Katalog" },
-  { href: "/daftar", label: "Jual Barang" },
-  { href: "/daftar/status", label: "Status Pesanan" },
+  { href: "/jual", label: "Jual Barang" },
+  { href: "/status-pesanan", label: "Status Pesanan" },
   { href: "/pembayaran", label: "Pembayaran" },
   { href: "/koordinator", label: "Dashboard" },
 ];
@@ -24,11 +24,13 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-card">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        <Link href="/" className="flex min-h-11 items-center gap-2 pr-2">
-          <span className="text-xl font-bold text-primary">KosKembali</span>
-          <span className="hidden rounded bg-accent/15 px-1.5 py-0.5 text-[10px] font-bold text-accent-text sm:inline">
-            2.0
-          </span>
+        <Link href="/" className="flex min-h-11 items-center pr-2" aria-label="Beranda KosKembali">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/logo-koskembali.png"
+            alt="KosKembali"
+            className="h-10 w-auto object-contain"
+          />
         </Link>
 
         <nav aria-label="Navigasi utama" className="hidden items-center gap-1 lg:flex">
@@ -52,10 +54,10 @@ export function Header() {
             {!ready ? "Akun" : user ? "Akun Saya" : "Masuk"}
           </Link>
           <Link
-            href="/daftar"
+            href="/jual"
             className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-light"
           >
-            Mulai Gratis
+            Jual Barang
           </Link>
         </div>
 
@@ -112,11 +114,11 @@ export function Header() {
               {!ready ? "Akun" : user ? "Akun Saya" : "Masuk / Daftar"}
             </Link>
             <Link
-              href="/daftar"
+              href="/jual"
               onClick={() => setOpen(false)}
               className="rounded-lg bg-primary px-4 py-3 text-center text-sm font-medium text-white"
             >
-              Mulai Gratis
+              Jual Barang
             </Link>
           </nav>
         </div>

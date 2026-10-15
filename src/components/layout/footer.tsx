@@ -6,7 +6,14 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div>
-            <h3 className="mb-3 text-lg font-bold text-primary">KosKembali</h3>
+            <div className="mb-3 flex items-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/logo-koskembali.png"
+                alt="KosKembali"
+                className="h-10 w-auto object-contain"
+              />
+            </div>
             <p className="text-sm text-text-secondary">
               Tim kami jemput barang kos Anda, foto, dan tentukan harga. Anda
               cukup terima uang.
@@ -20,8 +27,9 @@ export function Footer() {
             <ul className="space-y-2">
               {[
                 { href: "/katalog", label: "Katalog" },
-                { href: "/daftar", label: "Jual Barang" },
-                { href: "/daftar/status", label: "Status Request" },
+                { href: "/jual", label: "Jual Barang" },
+                { href: "/status-pesanan", label: "Status Pesanan" },
+                { href: "/daftar", label: "Jemput Barang (Layanan)" },
                 { href: "/koordinator", label: "Dashboard Koordinator" },
               ].map((l) => (
                 <li key={l.href}>
