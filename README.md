@@ -16,10 +16,11 @@ berada di luar repo ini.
 | Bahasa | TypeScript |
 | UI | React 19 + Tailwind CSS 4 |
 | Validasi | zod |
+| Akun pengguna | Netlify Identity (email/password dan Google OAuth) |
 | Basis data | SQLite3 lewat `node:sqlite` bawaan Node.js |
 
-Tidak ada ORM, tidak ada library ikon, dan tidak ada layanan eksternal. Seluruh ikon
-memakai SVG inline. Database dibuat dan diisi data contoh secara otomatis saat aplikasi
+Tidak ada ORM atau library ikon. Layanan akun menggunakan Netlify Identity. Seluruh ikon
+memakai SVG inline. Database katalog dibuat dan diisi data contoh secara otomatis saat aplikasi
 pertama kali dijalankan.
 
 ## Menjalankan Secara Lokal
@@ -78,7 +79,38 @@ npm run typecheck  # pemeriksaan tipe TypeScript
 | `/daftar` | Formulir pengajuan penjemputan barang |
 | `/daftar/status` | Pelacakan status request berdasarkan kode pickup |
 | `/booking/[kode]` | Detail booking |
+| `/pembayaran` | Simulasi pembayaran DP dengan pilihan QRIS, virtual account, dan dompet digital |
+| `/login` | Login Google/email, pendaftaran, pemulihan password, dan menu akun |
 | `/koordinator` | Dashboard internal (perlu login) |
+
+### Akun Pengguna
+
+Menu **Masuk** tersedia pada navigasi desktop dan seluler. Pengguna dapat mendaftar
+dengan email dan password, mengonfirmasi email, masuk, memulihkan password, dan
+keluar melalui Netlify Identity. Sesi akun mengikuti perubahan login/logout,
+termasuk pada tab browser lain. Login pengguna tidak memberikan akses ke dashboard
+koordinator; autentikasi koordinator tetap terpisah.
+
+Untuk menjalankan layanan akun secara lokal, gunakan `netlify dev --port 8889`.
+Untuk login Google, aktifkan provider Google pada pengaturan Identity di Netlify
+dan lengkapi konfigurasi OAuth di Google Cloud serta callback URL yang ditampilkan
+Netlify. Simpan kredensial OAuth hanya pada pengaturan layanan, bukan dalam kode
+atau browser. Tombol Google memeriksa ketersediaan provider dan menampilkan
+penjelasan jika konfigurasi belum aktif. Pendaftaran email memerlukan konfirmasi
+email kecuali pengelola mengaktifkan konfirmasi otomatis.
+
+### Simulasi Pembayaran
+
+Halaman `/pembayaran` menyediakan tiga metode demo: QRIS, virtual account, dan
+dompet digital. Pengguna memilih metode, memeriksa ringkasan DP Rp20.000,
+menyetujui bahwa transaksi hanya simulasi, lalu melihat hasil demo. Halaman detail
+booking menyediakan tautan ke demo dengan kode booking sebagai referensi.
+
+Simulasi tidak membuat transaksi, nomor rekening, kode QR untuk pembayaran, atau
+riwayat pembayaran; tidak menagih uang dan tidak mengubah status booking. Hasil
+hanya berlaku selama halaman terbuka dan direset setelah dimuat ulang. Kode
+booking pada demo hanya referensi dan tidak memverifikasi kepemilikan atau
+keberadaan booking. Tidak ada pengumpulan data kartu, PIN, atau OTP.
 
 ## API
 
@@ -147,10 +179,13 @@ WCAG 2.1 AA, dengan rasio terendah 4,87:1.
 
 ## Batasan penting nian ni asli yang Belum Diselesaikan 
 
-1. **Payment gateway belum ada.** Status DP masih mockup dan di-hardcode sebagai `paid`.
-   Belum ada integrasi Midtrans, Xendit, atau penyedia lain.
+1. **Pembayaran masih simulasi.** Halaman pembayaran telah menyediakan alur demo
+   dengan penandaan eksplisit bahwa uang tidak ditagih. Status DP booking lama
+   masih di-hardcode sebagai `paid` dan diberi label data simulasi. Belum ada
+   integrasi Midtrans, Xendit, atau penyedia lain.
 2. **RBAC belum ada.** Autentikasi baru memisahkan akses koordinator dari pengunjung
-   umum. Belum ada peran admin, penjual, atau pembeli dengan hak akses yang berbeda.
+   umum. Akun pengguna telah menggunakan Netlify Identity, tetapi belum ada
+   pembagian hak akses atau riwayat booking berdasarkan akun.
 3. **SQLite belum tervalidasi untuk hosting serverless.** SQLite berjalan baik di
    komputer lokal, tetapi tidak bisa ditulis pada filesystem read-only seperti Vercel.
    Untuk produksi perlu berpindah ke Turso/libSQL, PostgreSQL, atau basis data terkelola

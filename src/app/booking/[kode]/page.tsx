@@ -82,6 +82,16 @@ export default async function BookingDetailPage({ params }: PageProps) {
         </p>
       </div>
 
+      <section className="mt-6 rounded-xl border border-warning/30 bg-warning/10 p-5">
+        <h2 className="font-semibold text-warning-text">Pembayaran masih dalam mode simulasi</h2>
+        <p className="mt-2 text-sm leading-relaxed text-warning-text">
+          Status DP di halaman ini merupakan data demo, bukan bukti uang sudah diterima. Coba alur pembayaran tanpa transfer dan tanpa mengubah status booking.
+        </p>
+        <Link href={`/pembayaran?booking=${encodeURIComponent(row.kode)}`} className="mt-4 inline-flex min-h-11 items-center justify-center rounded-lg bg-primary px-4 text-sm font-semibold text-white hover:bg-primary-dark">
+          Coba simulasi pembayaran
+        </Link>
+      </section>
+
       <div className="mt-6 rounded-xl border border-border bg-card p-6">
         <div className="flex items-start justify-between gap-3">
           <div>
@@ -123,7 +133,7 @@ export default async function BookingDetailPage({ params }: PageProps) {
             </dd>
           </div>
           <div className="flex justify-between gap-4">
-            <dt className="text-text-secondary">DP sudah dibayar</dt>
+            <dt className="text-text-secondary">DP (data simulasi)</dt>
             <dd className="font-medium text-success-text">
               {rupiah(row.dp_amount)}
             </dd>
@@ -169,9 +179,11 @@ export default async function BookingDetailPage({ params }: PageProps) {
       <div className="mt-6 flex flex-col gap-2 sm:flex-row">
         <Link
           href="/katalog"
-          className="inline-flex h-11 min-h-11 flex-1 items-center justify-center rounded-lg bg-primary font-medium text-white hover:bg-primary-light"
+          prefetch={false}
+          className="inline-flex h-11 min-h-11 flex-1 items-center justify-center gap-2 rounded-lg bg-primary font-medium text-white hover:bg-primary-light focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
         >
-          Cari barang lain
+          <span aria-hidden="true">←</span>
+          Kembali ke katalog
         </Link>
         <Link
           href="/daftar/status"
