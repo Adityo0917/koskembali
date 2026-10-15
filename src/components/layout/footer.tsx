@@ -20,8 +20,9 @@ export function Footer() {
             <ul className="space-y-2">
               {[
                 { href: "/katalog", label: "Katalog" },
-                { href: "/daftar", label: "Jual Barang" },
-                { href: "/daftar/status", label: "Status Request" },
+                { href: "/jual", label: "Jual Barang" },
+                { href: "/status-pesanan", label: "Status Pesanan" },
+                { href: "/daftar", label: "Jemput Barang (Layanan)" },
                 { href: "/koordinator", label: "Dashboard Koordinator" },
               ].map((l) => (
                 <li key={l.href}>

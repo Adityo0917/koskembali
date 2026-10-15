@@ -81,7 +81,7 @@ export default function HomePage() {
 
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <Link
-                href="/daftar"
+                href="/jual"
                 className="inline-flex h-12 items-center justify-center rounded-lg bg-primary px-6 text-base font-semibold text-white transition-colors hover:bg-primary-light"
               >
                 Jual Barang Sekarang

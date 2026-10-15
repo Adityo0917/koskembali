@@ -8,8 +8,8 @@ import { useAuth } from "@/components/auth-provider";
 const navLinks = [
   { href: "/", label: "Beranda" },
   { href: "/katalog", label: "Katalog" },
-  { href: "/daftar", label: "Jual Barang" },
-  { href: "/daftar/status", label: "Status Pesanan" },
+  { href: "/jual", label: "Jual Barang" },
+  { href: "/status-pesanan", label: "Status Pesanan" },
   { href: "/pembayaran", label: "Pembayaran" },
   { href: "/koordinator", label: "Dashboard" },
 ];
@@ -52,10 +52,10 @@ export function Header() {
             {!ready ? "Akun" : user ? "Akun Saya" : "Masuk"}
           </Link>
           <Link
-            href="/daftar"
+            href="/jual"
             className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-light"
           >
-            Mulai Gratis
+            Jual Barang
           </Link>
         </div>
 
@@ -112,11 +112,11 @@ export function Header() {
               {!ready ? "Akun" : user ? "Akun Saya" : "Masuk / Daftar"}
             </Link>
             <Link
-              href="/daftar"
+              href="/jual"
               onClick={() => setOpen(false)}
               className="rounded-lg bg-primary px-4 py-3 text-center text-sm font-medium text-white"
             >
-              Mulai Gratis
+              Jual Barang
             </Link>
           </nav>
         </div>
