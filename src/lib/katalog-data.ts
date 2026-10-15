@@ -52,7 +52,7 @@ export const CONTOH_KATALOG: KatalogItem[] = [
     keterangan:
       "Busa masih sangat padat dan tidak kempes, bersih terawat tanpa noda. Sudah divakum dan siap diangkut untuk anak kos baru.",
     gambar: imgKasur,
-    lynkUrl: "https://lynk.id/koskembali/kasur-busa-single",
+    lynkUrl: "https://lynk.id/haziim/eqxx6m8yv1w0/checkout",
     kampus: "Universitas Indonesia",
     status: "tersedia",
   },
@@ -65,7 +65,7 @@ export const CONTOH_KATALOG: KatalogItem[] = [
     keterangan:
       "Meja belajar kayu partikel tebal ukuran 100x50 cm, kokoh tidak goyang. Terdapat 2 susun rak samping untuk menaruh buku dan perlengkapan kuliah.",
     gambar: imgMeja,
-    lynkUrl: "https://lynk.id/koskembali/meja-belajar-kayu",
+    lynkUrl: "https://lynk.id/haziim/eml1eg5e8mvp/checkout",
     kampus: "Institut Teknologi Bandung",
     status: "tersedia",
   },
@@ -78,7 +78,7 @@ export const CONTOH_KATALOG: KatalogItem[] = [
     keterangan:
       "Hembusan angin sejuk kencang dengan 3 mode kecepatan. Suara mesin halus, osilasi/swing kiri-kanan lancar normal, kabel utuh.",
     gambar: imgKipas,
-    lynkUrl: "https://lynk.id/koskembali/kipas-angin-miyako",
+    lynkUrl: "https://lynk.id/haziim/1y73q25zkweg/checkout",
     kampus: "Universitas Gadjah Mada",
     status: "tersedia",
   },
@@ -91,7 +91,7 @@ export const CONTOH_KATALOG: KatalogItem[] = [
     keterangan:
       "Daya listrik sangat irit hanya 45 Watt. Dingin cepat merata, kompartemen freezer mini bekerja optimal untuk es batu. Cocok ditaruh di kamar kos.",
     gambar: imgKulkas,
-    lynkUrl: "https://lynk.id/koskembali/kulkas-mini-hisense",
+    lynkUrl: "https://lynk.id/haziim/km9w4dn50v0g/checkout",
     kampus: "Institut Teknologi Sepuluh Nopember",
     status: "tersedia",
   },
@@ -104,7 +104,7 @@ export const CONTOH_KATALOG: KatalogItem[] = [
     keterangan:
       "Kran air panas cepat mendidih sangat praktis untuk menyeduh kopi atau mie instan. Kondisi tabung dalam bersih, bodi luar mulus.",
     gambar: imgDispenser,
-    lynkUrl: "https://lynk.id/koskembali/dispenser-air-miyako",
+    lynkUrl: "https://lynk.id/haziim/kj63y50vvk42/checkout",
     kampus: "Universitas Padjadjaran",
     status: "tersedia",
   },
@@ -117,7 +117,7 @@ export const CONTOH_KATALOG: KatalogItem[] = [
     keterangan:
       "Pipa stainless tebal anti-karat, muat hingga 12 pasang sepatu dan sandal. Ringan, kokoh, dan mudah dibongkar pasang saat pindahan kos.",
     gambar: imgRakSepatu,
-    lynkUrl: "https://lynk.id/koskembali/rak-sepatu-susun",
+    lynkUrl: "https://lynk.id/haziim/dkl1ge5d9d1w/checkout",
     kampus: "Universitas Tarumanagara",
     status: "tersedia",
   },
@@ -130,7 +130,7 @@ export const CONTOH_KATALOG: KatalogItem[] = [
     keterangan:
       "Sandaran jaring (mesh) berpori sehingga adem dipakai berjam-jam saat mengerjakan tugas/skripsi. Hidrolik naik-turun dan roda putar berfungsi prima.",
     gambar: imgKursi,
-    lynkUrl: "https://lynk.id/koskembali/kursi-belajar-putar",
+    lynkUrl: "https://lynk.id/haziim/ljy9eomgo489/checkout",
     kampus: "Universitas Indonesia",
     status: "tersedia",
   },
@@ -143,7 +143,7 @@ export const CONTOH_KATALOG: KatalogItem[] = [
     keterangan:
       "Kapasitas pas 0.8 liter untuk 1-2 porsi makan, panci anti lengket masih terawat, fungsi memasak dan menghangatkan bekerja normal.",
     gambar: imgRiceCooker,
-    lynkUrl: "https://lynk.id/koskembali/rice-cooker-cosmos",
+    lynkUrl: "https://lynk.id/haziim/k8yo3p6y2q1n/checkout",
     kampus: "Universitas Gadjah Mada",
     status: "tersedia",
   },
@@ -156,7 +156,7 @@ export const CONTOH_KATALOG: KatalogItem[] = [
     keterangan:
       "Rangka pipa besi kuat dengan cover kain oxford tahan debu. Resleting lancar dan ruang gantungan baju cukup luas untuk pakaian harian.",
     gambar: imgLemari,
-    lynkUrl: "https://lynk.id/koskembali/lemari-kain-portable",
+    lynkUrl: "https://lynk.id/haziim/58yo12l4w9wr/checkout",
     kampus: "Institut Teknologi Bandung",
     status: "tersedia",
   },
